@@ -1,5 +1,5 @@
 let yesterdaysDate = new Date;
-yesterdaysDate.setDate(yesterdaysDate.getDate() - 1);
+yesterdaysDate.setDate(yesterdaysDate.getDate() - 2);
 const date = {
 	year: yesterdaysDate.getFullYear(),
 	month: yesterdaysDate.getMonth() + 1,
