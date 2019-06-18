@@ -86,25 +86,25 @@ function scrapeHtml(html: any) {
 			game: {
 				winning_team: { 
 					name: winner,
-					runs: winningScore,
+					runs: +winningScore,
 					winning_pitcher: {
 						name: winningPitcher,
 						record: {
-							wins: winningPitcherWins, 
-							losses: winningPitcherLosses
+							wins: +winningPitcherWins, 
+							losses: +winningPitcherLosses
 						}
 					},
 					save_pitcher: savePitcher,
-					saves: saves
+					saves: +saves
 				},
 				losing_team: {
 					name: loser,
-					runs: losingScore,
+					runs: +losingScore,
 					losing_pitcher: {
 						name: losingPitcher,
 						record: {
-							wins: losingPitcherWins,
-							losses: losingPitcherLosses
+							wins: +losingPitcherWins,
+							losses: +losingPitcherLosses
 						}
 					}
 				},
@@ -113,7 +113,7 @@ function scrapeHtml(html: any) {
 					away_team: awayTeam,
 					location: ballparks[homeTeam]
 				},
-				total_innings: finalInnings
+				total_innings: +finalInnings
 			}
 		});
 	});
