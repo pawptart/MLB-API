@@ -118,7 +118,8 @@ function scrapeHtml(html: any) {
 	let postData = async (req: any) => {
 		const { mongoDb, mongoClient } = await mongoConnect(mongoUrl, 'game');
 		try {
-			await mongoDb.collection('games').insertOne(req);
+			await mongoDb.collection('games').insertOne(req);			
+			console.log("Data posted successfully!");
 		}
 		catch (err) {
 			console.log(err);
@@ -127,8 +128,6 @@ function scrapeHtml(html: any) {
 
 		try {
 			await mongoClient.close();
-			console.log("Data posted successfully!");
-			process.exit(0);
 		}
 		catch (err) {
 			console.log(err);
