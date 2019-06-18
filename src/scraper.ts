@@ -138,6 +138,6 @@ function scrapeHtml(html: any) {
 
 	// Post the data
 	postData(games);
-	
+	process.exit(0);
 }
 
