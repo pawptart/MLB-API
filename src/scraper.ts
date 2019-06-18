@@ -86,22 +86,26 @@ function scrapeHtml(html: any) {
 			game: {
 				winning_team: { 
 					name: winner,
-					score: winningScore,
-					winning_pitcher: winningPitcher,
-					winning_pitcher_record: {
-						wins: winningPitcherWins, 
-						losses: winningPitcherLosses
+					runs: winningScore,
+					winning_pitcher: {
+						name: winningPitcher,
+						record: {
+							wins: winningPitcherWins, 
+							losses: winningPitcherLosses
+						}
 					},
 					save_pitcher: savePitcher,
 					saves: saves
 				},
 				losing_team: {
 					name: loser,
-					score: losingScore,
-					losing_pitcher: losingPitcher,
-					losing_pitcher_record: {
-						wins: losingPitcherWins,
-						losses: losingPitcherLosses
+					runs: losingScore,
+					losing_pitcher: {
+						name: losingPitcher,
+						record: {
+							wins: losingPitcherWins,
+							losses: losingPitcherLosses
+						}
 					}
 				},
 				played_at: {
