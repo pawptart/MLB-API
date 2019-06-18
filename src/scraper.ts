@@ -127,17 +127,17 @@ function scrapeHtml(html: any) {
 
 		try {
 			await mongoClient.close();
+			console.log("Data posted successfully!");
+			process.exit(0);
 		}
 		catch (err) {
 			console.log(err);
 			return;
 		}
-		console.log("Data posted successfully!");
-		return;
+		
 	};
 
 	// Post the data
 	postData(games);
-	process.exit(0);
 }
 
