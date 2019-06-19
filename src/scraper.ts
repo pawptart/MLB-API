@@ -94,8 +94,10 @@ function scrapeHtml(html: any) {
 							losses: +winningPitcherLosses
 						}
 					},
-					save_pitcher: savePitcher,
-					saves: +saves
+					save_pitcher: {
+						name: savePitcher,
+						saves: +saves
+					}
 				},
 				losing_team: {
 					name: loser,
