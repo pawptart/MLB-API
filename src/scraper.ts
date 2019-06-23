@@ -27,6 +27,8 @@ function scrapeHtml(html: any) {
 	const $ = cheerio.load(html);
 
 	// Pull data from each game summary 
+	let noGamesPlayed = $('div#content h3').text();
+
 	$('div.game_summary').each((i, elem) => {
 		let winner = $(elem).find('tr.winner td:not([class]) a').text();
 		let loser = $(elem).find('tr.loser td:not([class]) a').text();
@@ -83,6 +85,7 @@ function scrapeHtml(html: any) {
 
 		// Push game data to the games object
 		games.games.push({
+			games_played: !noGamesPlayed,
 			game: {
 				winning_team: { 
 					name: winner,
