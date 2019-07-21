@@ -1,4 +1,4 @@
-import Axios = require('axios');
+import Axios from 'axios';
 import { baseballUrl, date } from './helpers/url_helper';
 import cheerio from 'cheerio';
 import ballparks from './helpers/ballparks';
@@ -8,7 +8,7 @@ import { mongoConnect } from './helpers/mongo-helper';
 const mongoUrl = 'mongodb+srv://test:test@cluster0-9igoz.mongodb.net/test?retryWrites=true&w=majority';
 
 // Scrape raw HTML from Baseball-Reference
-Axios.default.get(baseballUrl)
+Axios.get(baseballUrl)
 .then( (response: any) => {
 	scrapeHtml(response.data);
 })

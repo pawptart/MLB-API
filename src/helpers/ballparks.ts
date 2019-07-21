@@ -31,7 +31,7 @@ const ballparks = {
 	},
 	"Cincinatti Reds": {
 		stadium: "Great American Ballpark",
-		city: "Cincinatti",
+		city: "Cincinnati",
 		state: "OH"
 	},
 	"Cleveland Indians": {
