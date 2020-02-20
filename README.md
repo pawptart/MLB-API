@@ -1,6 +1,6 @@
 # MLB-scraper
 [![NodeJS](https://img.shields.io/badge/Node-v10.15.3-green.svg)](https://nodejs.org/en/)
-[![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg)](https://nodejs.org/en/)
+[![Maintenance](https://img.shields.io/badge/Maintained-No-red.svg)](https://nodejs.org/en/)
 [![GitHub issues](https://img.shields.io/github/issues/pawptart/MLb-scraper.svg)](https://github.com/pawptart/MLB-scraper/issues/)
 
 A web scraper for MLB game scores posted nightly to a MongoDB database. 
